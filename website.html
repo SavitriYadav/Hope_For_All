@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope for All - Empowering Lives</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        header {
+            background: #4CAF50;
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #fff;
+            color: #4CAF50;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .btn:hover {
+            background: #45a049;
+            color: #fff;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4CAF50;
+        }
+        .about .slider {
+            position: relative;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .about .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .about .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .about .prev, .about .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .about .prev { left: 10px; }
+        .about .next { right: 10px; }
+        .work {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            flex: 1 1 250px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card i {
+            font-size: 40px;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .get-involved form {
+            max-width: 400px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        input, select, button {
+            padding: 10px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        footer a {
+            color: #4CAF50;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media(max-width:768px) {
+            header h1 { font-size: 2rem; }
+            .work { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hope for All</h1>
+        <p>Empowering Lives Through Education and Support</p>
+        <a href="#donate" class="btn">Donate Now</a>
+    </header>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>We are committed to improving the lives of underprivileged children and empowering women through education, skill training, and sustainable initiatives.</p>
+        <div class="slider">
+            <div class="slides">
+                <img src="assets/banner-1-1.jpg" alt="Community work 1">
+                <img src="assets/banner1-scaledjpg.webp" alt="Community work 2">
+                <img src="assets/access-to-quality-education.webp" alt="Community work 3">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+    <section class="work" id="work">
+        <h2>Our Work</h2>
+        <div class="card">
+            <i class="fas fa-book"></i>
+            <h3>Child Education</h3>
+            <p>Providing access to quality education for every child.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-female"></i>
+            <h3>Women Empowerment</h3>
+            <p>Creating opportunities for women to thrive and lead.</p>
+        </div>
+        <div class="card">
+            <i class="fas fa-tools"></i>
+            <h3>Skill Training</h3>
+            <p>Equipping individuals with skills for a better future.</p>
+        </div>
+    </section>
+
+    <section class="get-involved" id="donate">
+        <h2>Get Involved</h2>
+        <p style="text-align:center; margin-bottom: 20px;">Join us in making a difference! Volunteer or donate to support our mission.</p>
+        <form>
+            <input type="number" placeholder="Amount (INR)" required>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <select required>
+                <option value="">Select</option>
+                <option value="volunteer">Volunteer</option>
+                <option value="donate">Donate</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Our Focus: Child Education | Women Empowerment | Skill Training</p>
+        <p>Contact: info@hopeforall.org | +91 98765 43210</p>
+        <p>
+            <a href="#">Facebook</a> |
+            <a href="#">Twitter</a> |
+            <a href="#">Instagram</a>
+        </p>
+        <p>&copy; 2025 Hope for All. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Image Slider
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+        let index = 0;
+
+        function showSlide(i) {
+            if (i >= images.length) index = 0;
+            if (i < 0) index = images.length - 1;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        next.addEventListener('click', () => {
+            index++;
+            showSlide(index);
+        });
+
+        prev.addEventListener('click', () => {
+            index--;
+            showSlide(index);
+        });
+    </script>
+</body>
+</html>
